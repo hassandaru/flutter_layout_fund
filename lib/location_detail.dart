@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:layout_practice/models/location.dart';
 
 class LocationDetail extends StatelessWidget {
-  const LocationDetail({Key? key}) : super(key: key);
+  final Location location;
+
+  LocationDetail(this.location);
+  // const LocationDetail({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text('title goes here')),
+        appBar: AppBar(title: Text(location.name)),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.stretch,
