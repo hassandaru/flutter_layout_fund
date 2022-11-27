@@ -5,6 +5,7 @@ class LocationDetail extends StatelessWidget {
   final Location location;
 
   LocationDetail(this.location);
+
   // const LocationDetail({Key? key}) : super(key: key);
 
   @override
@@ -14,16 +15,20 @@ class LocationDetail extends StatelessWidget {
         body: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            _section("first text.", Colors.red),
-            _section("second text.", Colors.green),
-            _section("three text.", Colors.blue),
-            _section("four text!yep yepyyfdsafdsf", Colors.orange),
-
-          ],
+          children: _renderFacts(location),
         )
     );
   }
+
+  List<Widget> _renderFacts(Location location) {
+    final result = <Widget>[];
+    for (int i = 0; i < location.facts.length; i++) {
+      result.add(_sectionTitle(location.facts[i].title));
+      result.add(_sectionText(location.facts[i].text));
+    }
+    return result;
+  }
+
 
   Widget _section(String title, Color color) {
     return Container(
@@ -34,6 +39,13 @@ class LocationDetail extends StatelessWidget {
     );
   }
 
+  Widget _sectionTitle(String text) {
+    return Text(text);
+  }
+
+  Widget _sectionText(String text) {
+    return Text(text);
+  }
 }
 
 
