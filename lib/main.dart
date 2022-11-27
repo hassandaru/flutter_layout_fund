@@ -12,10 +12,37 @@ class myApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(title: Text('title goes here')),
-        body: Container(
-          child: Text('whatever.')
-        )
+        body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Container(
+              decoration: BoxDecoration(
+                color: Colors.red,
+              ),
+              child: Text('first text.')
+          ),
+          Container(
+              decoration: BoxDecoration(
+                color: Colors.green,
+              ),
+              child: Text('second text.')
+          ),
+          Container(
+              decoration: BoxDecoration(
+                color: Colors.blue,
+              ),
+              child: Text('three text.')
+          ),
+          Container(
+              decoration: BoxDecoration(
+                color: Colors.orange,
+              ),
+              child: Text('four text.')
+          ),
+
+        ],
       )
-    );
+      ));
   }
 }
