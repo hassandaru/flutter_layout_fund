@@ -77,7 +77,7 @@ mixin MockLocation implements Location {
               'Kyoto airport, with several terminals, is located 16 kilometres south of the city and is also known as Kyoto. Kyoto can also be reached by transport links from other regional airports.')
         ]),
     Location(
-        name: 'Odaiba',
+        name: 'Odaibad',
         url: 'https://www.yhunter.ru/wp-content/uploads/2015/06/DSC1876.jpg',
         facts: <LocationFact>[
           LocationFact(
