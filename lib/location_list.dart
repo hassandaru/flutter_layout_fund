@@ -32,7 +32,7 @@ class LocationList extends StatelessWidget {
   }
   
   Widget _itemTitle(Location location) {
-    return Text('>>> {$location.name}', style: Styles.textDefault);
+    return Text(location.name, style: Styles.textDefault);
   }
 
 }
