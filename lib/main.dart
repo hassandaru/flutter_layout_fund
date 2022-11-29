@@ -8,7 +8,7 @@ void main() {
    // final Location mockLocation = MockLocation.FetchAny();
    // return runApp( MaterialApp(home: LocationDetail(mockLocation)));
    final mockLocations = MockLocation.fetchAll();
-
+   //run on windows
    return runApp(MaterialApp(home: LocationList(mockLocations)));
 }
 
