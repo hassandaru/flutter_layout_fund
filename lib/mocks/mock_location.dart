@@ -1,4 +1,4 @@
-import 'package:layout_practice/models/location_fact.dart';
+import '../models/location_fact.dart';
 import '../models/location.dart';
 
 mixin MockLocation implements Location {
@@ -96,5 +96,10 @@ mixin MockLocation implements Location {
 
   static List<Location> fetchAll() {
     return MockLocation.items;
+  }
+
+  static Location fetch(int index) {
+    //basically using index but in API call we would actually use id
+    return MockLocation.items[index];
   }
 }
